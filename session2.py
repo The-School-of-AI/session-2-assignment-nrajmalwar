@@ -64,10 +64,14 @@ def compare_strings_old(n):
 
 # YOU NEED TO CHANGE THIS PROGRAM
 def compare_strings_new(n):
-    a = 'a long string that is not intered'
-    b = 'a long string that is not intered'
+    a = sys.intern('a long string that is not intered' * 200)
+    b = sys.intern('a long string that is not intered' * 200)
 
-    if a == b:
-        pass
-    if 'd' in a:
-        pass
+    for i in range(n):
+        if a is b:
+            pass
+    
+    char_list = list(set(a))
+    for i in range(n):
+        if 'd' in char_list:
+            pass
