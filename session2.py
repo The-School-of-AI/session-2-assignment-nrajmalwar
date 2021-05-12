@@ -34,7 +34,8 @@ def reserved_function():
 
 def clear_memory(collection: List[Something]):
     # you probably need to add some comment here
-    collection.clear()
+#     collection.clear()
+    del collection
 
 
 def critical_function():
