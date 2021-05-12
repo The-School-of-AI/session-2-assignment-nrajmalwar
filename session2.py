@@ -10,19 +10,21 @@ import gc
 # Refer to test_clear_memory Test in test_session2.py to see how we're crudely finding that
 # this code is sub-optimal.
 class Something(object):
-
     def __init__(self):
         super().__init__()
         self.something_new = SomethingNew(self)
-
+        
+    def __repr__(self):
+        return hex(id(self))
 
 class SomethingNew(object):
-
     def __init__(self, i: int = 0, something: Something = None):
         super().__init__()
         self.i = i
         self.something = something
-
+    
+    def __repr__(self):
+        return hex(id(self))
 
 def add_something(collection: List[Something], i: int):
     something = Something()
@@ -38,14 +40,11 @@ def clear_memory(collection: List[Something]):
     collection.clear()
     gc.collect()
 
-
-
 def critical_function():
     collection = list()
     for i in range(1, 1024 * 128):
         add_something(collection, i)
     clear_memory(collection)
-
 
 # Here we are suboptimally testing whether two strings are exactly same or not
 # After that we are trying to see if we have a particular character in that string or not
@@ -73,4 +72,3 @@ def compare_strings_new(n):
     
     if 'd' in a:
         pass
-    
