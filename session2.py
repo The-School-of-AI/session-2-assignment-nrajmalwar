@@ -1,6 +1,7 @@
 # KINDLY GO THROUGH TEST FILE TO UNDERSTAND
 from typing import List
 import time
+import gc
 
 # Here in this code we will be leaking memory because we are creating cyclic reference.
 # Find that we are indeed making cyclic references.
@@ -34,8 +35,9 @@ def reserved_function():
 
 def clear_memory(collection: List[Something]):
     # you probably need to add some comment here
-#     collection.clear()
-    del collection
+    collection.clear()
+    gc.collect()
+
 
 
 def critical_function():
