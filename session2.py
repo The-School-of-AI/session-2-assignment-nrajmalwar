@@ -12,7 +12,7 @@ class Something(object):
 
     def __init__(self):
         super().__init__()
-        self.something_new = SomethingNew(i, self)
+        self.something_new = SomethingNew(self)
 
 
 class SomethingNew(object):
