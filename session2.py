@@ -13,7 +13,7 @@ class Something(object):
     def __init__(self):
         super().__init__()
         self.something_new = SomethingNew(self)
-        
+
     def __repr__(self):
         return hex(id(self))
 
@@ -22,7 +22,7 @@ class SomethingNew(object):
         super().__init__()
         self.i = i
         self.something = something
-    
+
     def __repr__(self):
         return hex(id(self))
 
@@ -66,9 +66,8 @@ def compare_strings_old(n):
 def compare_strings_new(n):
     a = 'a long string that is not intered'
     b = 'a long string that is not intered'
-    
+
     if a == b:
         pass
-    
     if 'd' in a:
         pass
