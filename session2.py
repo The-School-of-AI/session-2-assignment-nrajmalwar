@@ -12,7 +12,7 @@ class Something(object):
 
     def __init__(self):
         super().__init__()
-        self.something_new = None
+        self.something_new = SomethingNew(i, self)
 
 
 class SomethingNew(object):
@@ -62,4 +62,12 @@ def compare_strings_old(n):
 
 # YOU NEED TO CHANGE THIS PROGRAM
 def compare_strings_new(n):
-    time.sleep(6) # remove this line, this is just to simulate your "slow" code
+    a = 'a long string that is not intered'
+    b = 'a long string that is not intered'
+    
+    if a == b:
+        pass
+    
+    if 'd' in a:
+        pass
+    
