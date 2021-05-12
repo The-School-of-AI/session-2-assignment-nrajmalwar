@@ -28,7 +28,7 @@ def add_something(collection: List[Something], i: int):
     something.something_new = SomethingNew(i, something)
     collection.append(something)
 
-def reserved_Function():
+def reserved_function():
     # to be used in future if required
     pass
 
