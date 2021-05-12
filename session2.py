@@ -36,7 +36,7 @@ def reserved_function():
     pass
 
 def clear_memory(collection: List[Something]):
-    # you probably need to add some comment here
+    # adding gc collect to clear the memory
     collection.clear()
     gc.collect()
 
