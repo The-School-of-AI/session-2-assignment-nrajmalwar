@@ -50,4 +50,4 @@ Object Mutability and Interning
 > 
 ## __int__
 
-> \__init\__ is used to initialize the state of an object. It contains a collection of statements that are executed at the time of creation of the object. We use `self` in order to pass or create the variable associated with the object being instantiated.
+> __init__ is used to initialize the state of an object. It contains a collection of statements that are executed at the time of creation of the object. We use `self` in order to pass or create the variable associated with the object being instantiated.
