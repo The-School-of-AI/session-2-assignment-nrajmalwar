@@ -58,7 +58,7 @@ def compare_strings_old(n):
     for i in range(n):
         if a == b:
             pass
-    char_list = list(a)
+    char_list = list(a)    
     for i in range(n):
         if 'd' in char_list:
             pass
