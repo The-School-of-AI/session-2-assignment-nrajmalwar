@@ -13,7 +13,7 @@ import sys
 class Something(object):
     def __init__(self):
         super().__init__()
-        self.something_new = SomethingNew(self)
+        self.something_new = SomethingNew(None)
 
     def __repr__(self):
         return hex(id(self))
@@ -39,7 +39,7 @@ def reserved_function():
 def clear_memory(collection: List[Something]):
     # adding gc collect to clear the memory
     collection.clear()
-    gc.collect()
+    # gc.collect()
 
 def critical_function():
     collection = list()
