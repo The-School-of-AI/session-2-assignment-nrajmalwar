@@ -39,7 +39,7 @@ def reserved_function():
 def clear_memory(collection: List[Something]):
     # adding gc collect to clear the memory
     collection.clear()
-    # gc.collect()
+    gc.collect()
 
 def critical_function():
     collection = list()
